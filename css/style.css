@@ -146,6 +146,9 @@
 }
 
 /*** Header ***/
+
+
+
 .header-carousel .owl-carousel-text {
   position: absolute;
   width: 100%;
@@ -656,8 +659,11 @@
 
 #portfolio-gallery {
   margin-top: 30px;
-  width: 60%;
-  margin-left: 300px;
+  width: auto;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  /* margin-left: 300px; */
 }
 
 .project-container {
@@ -694,10 +700,10 @@ video {
 }
 
 /* Gutter between items */
-.row {
+/* .row {
   margin-right: -15px;
   margin-left: -15px;
-}   
+}    */
 
 @media (min-width: 992px) {
   .portfolio-item {
@@ -829,5 +835,119 @@ video {
 @media (min-width: 768px) {
   .team-text {
     text-align: left;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .portfolio-item {
+      flex: 1 1 calc(50% - 20px); /* Two items per row on medium screens */
+  }
+  /* #portfolio-gallery{
+    margin-left: 90px;
+  } */
+
+  .footer .container {
+    padding: 30px 0;
+}
+
+.footer .row {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .col-lg-3, .footer .col-md-6 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+}
+
+/* Responsive adjustments for small screens (mobile devices) */
+@media (max-width: 576px) {
+  .portfolio-item {
+      flex: 1 1 100%; /* One item per row on small screens */
+  }
+  /* #portfolio-gallery{
+    margin-left: 115px;
+  } */
+  .footer p, .footer a {
+    font-size: 12px;
+}
+
+.footer .btn-social {
+    width: 35px;
+    height: 35px;
+}
+
+.footer .btn {
+    font-size: 12px;
+}
+}
+
+
+@media (max-width: 992px) {
+  .contact-info {
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-info div {
+      width: 100%; /* Make contact blocks full-width on small screens */
+  }
+
+  .contact-info h5 {
+      font-size: 18px;
+  }
+
+  .contact-info p {
+      font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-bottom {
+      font-size: 12px;
+      
+  }
+  .footer{
+    /* height: 100px; */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .col-lg-3 {
+      margin-bottom: 20px; /* Adds spacing between sections on smaller screens */
+  }
+
+  .btn-social {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .fa {
+      font-size: 18px;
+  }
+
+  .col-lg-3 p {
+      font-size: 14px; /* Adjusts font size for mobile readability */
+  }
+}
+
+@media (min-width: 992px) {
+  .btn-social {
+      width: 50px;
+      height: 50px;
+      font-size: 20px;
+  }
+
+  .col-lg-3 p {
+      font-size: 16px;
   }
 }
