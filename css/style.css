@@ -25,6 +25,10 @@
   z-index: 99;
 }
 
+/* body{
+  overflow: hidden;
+} */
+
 /*** Spinner ***/
 #spinner {
   opacity: 0;
@@ -657,79 +661,53 @@
   border-top: 1px solid rgba(256, 256, 256, 0.1);
 }
 
-#portfolio-gallery {
-  margin-top: 30px;
-  width: auto;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* margin-left: 300px; */
-}
 
-.project-container {
-  margin-bottom: 20px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
+/* vidoe */
 
-.project-container:hover {
-  transform: scale(1.05);
-}
 
-.video-wrapper {
-  border-radius: 10px;
-  overflow: hidden;
-}
-/* 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-} */
 
-.project-container {
-  padding: 10px;
-}
 
-/* Make video fully responsive */
-video {
-  width: 100%;
-  height: auto;
+.project-container video {
+  width: 100%; /* Make the video fill the available space */
   display: block;
-  border-radius: 10px;
-}
-
-/* Gutter between items */
-/* .row {
-  margin-right: -15px;
-  margin-left: -15px;
-}    */
-
-@media (min-width: 992px) {
-  .portfolio-item {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .portfolio-item {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
+  border-radius: 8px; /* Optional: add some border-radius for aesthetics */
 }
 
 
-@media (max-width: 767px) {
-  .portfolio-item {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Responsive columns */
+  gap: 15px; /* Space between grid items */
 }
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-container{
+ display: flex;
+ justify-content: center;
+}
+
+.project-container video {
+  width: 80%; /* Full width of the grid item */
+  border-radius: 8px; /* Optional: add border radius */
+}
+
+/* #video end */
+
+
 
 @media (max-width: 768px) {
-  .Header {
-    padding: 0 15px;
+  .project-container{
+    display: flex;
+    justify-content: center;
+   }
+
+  .project-container video {
+    width: 100%; /* Full width of the grid item */
+    border-radius: 8px; /* Optional: add border radius */
   }
 
   .display-4 {
@@ -758,9 +736,9 @@ video {
     margin: 0 !important;
   }
 
-  .col-lg-6 {
+  /* .col-lg-6 {
     padding: 0 15px;
-  }
+  } */
 
   p.d-inline-block.border.rounded-pill {
     font-size: 18px;
@@ -775,9 +753,9 @@ video {
     line-height: 30px;
   }
 
-  .wow.fadeInUp {
+  /* .wow.fadeInUp {
     padding: 0 15px;
-  }
+  } */
 
   ul.list-unstyled li {
     font-size: 16px; 
