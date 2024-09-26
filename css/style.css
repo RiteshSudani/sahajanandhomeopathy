@@ -25,9 +25,50 @@
   z-index: 99;
 }
 
-/* body{
-  overflow: hidden;
-} */
+body{
+ background-color: #F2F2F2;
+ color: #333333;
+}
+
+
+.gradient-button {
+  background: linear-gradient(45deg, #ff6b6b, #f06595); /* Gradient colors */
+  color: black; /* Text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding */
+  border-radius: 25px; /* Rounded corners */
+  transition: background 0.3s; /* Transition for hover effect */
+  font-weight: bold;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(45deg, #f06595, #ff6b6b); /* Reverse gradient on hover */
+  color: black;
+  font-weight: bold;
+}
+
+
+.img-container {
+  position: relative;
+  overflow: hidden; /* Ensures the gradient does not overflow */
+}
+
+.img-container img {
+  width: 100%; /* Ensures the image covers the container */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.img-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Adjust gradient colors and opacity as needed */
+  z-index: 1; /* Ensures the gradient is above the image */
+}
+
 
 /*** Spinner ***/
 #spinner {
