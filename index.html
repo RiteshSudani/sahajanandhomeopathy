@@ -2,550 +2,525 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sahajanand_allergy_clinic</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <style>
-
-    </style>
-
 </head>
 
-<body>
-    <!-- Spinner Start -->
-
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-
-    <!-- Spinner End -->
-
-
-
-
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <img src="img/logo.png" alt="Logo"
-            style="height: 75px; width: 75px; border-radius: 5px; margin-left: 20px; padding: 7px;">
-
-
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-
-
-                <a href="#Service" class="nav-item nav-link">Service</a>
-                <div class="nav-item dropdown">
-
+<body class="bg-gradient-to-r from-blue-50 to-teal-50">
+    <nav class="bg-white">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-20 items-center justify-between">
+                <div class="flex items-center">
+                    <img src="img/logo.png" alt="Logo" class="h-14 w-14 mr-3 ">
+                    <h1 class="text-black text-lg font-bold">Sahajanand Allergy Clinic</h1>
+                    <!-- Changed to text-black -->
                 </div>
-                <a href="#video" class="nav-item nav-link">Videos</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
+                <div class="hidden sm:flex sm:flex-1 sm:justify-center">
+                    <div class="flex space-x-4">
+                        <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                            aria-current="page">Home Page</a>
+                        <a href="#"
+                            class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black">Service</a>
+                        <a href="#video"
+                            class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black">Videos</a>
+                        <a href="#Contact"
+                            class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black">Contact</a>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <button id="menu-btn" type="button"
+                        class="relative inline-flex items-center justify-center md:hidden rounded-md p-2 text-black hover:bg-gray-200 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            </h1>
-            <a href="#" class="btn rounded-0 py-4 px-lg-5" style="background: linear-gradient(45deg, #4a7c3c, #6ab04c, #3a5f2b); color: white;"
-                data-bs-toggle="modal" data-bs-target="#appointmentModal">
-                Appointment<i class="fa fa-arrow-right ms-3"></i>
-            </a>
+        </div>
 
+        <!-- Mobile menu -->
+        <div class="hidden sm:hidden" id="mobile-menu">
+            <div class="flex flex-col items-center space-y-1 px-2 pb-3 pt-2">
+                <a href="#"
+                    class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Dashboard</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Team</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Projects</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Calendar</a>
+            </div>
         </div>
     </nav>
-    <!-- Navbar End -->
+
+    <!-- hero section start -->
 
 
-    <!-- Header Start -->
+    <section class="flex flex-col lg:flex-row w-full">
+        <!-- Text Section -->
+        <div class="w-full flex justify-center items-center lg:w-1/2 p-4 text-center">
+            <p class="text-black text-center text-4xl md:text-6xl lg:text-7xl p-4 font-poppins">
+                એલર્જી & અસ્થમા
+            </p>
+        </div>
 
-
-
-
-
-    <div class="container-fluid Header p-0 mb-5" style="background: linear-gradient(45deg, #4a7c3c, #6ab04c, #3a5f2b);">
-        <div class="row g-0 align-items-center flex-column-reverse flex-lg-row">
-            <div class="col-lg-6 p-5 wow fadeIn" data-wow-delay="0.1s">
-                <h1 h1 class="display-4 text-white mb-5">એલર્જી & અસ્થમા
-                    શું એલર્જી સારી થઈ શકે?
-                </h1>
-                <h1 h1 class="display-4 text-white mb-5">
-                    એલર્જી શું છે ?
-                </h1>
-
+        <!-- Image Section -->
+        <div class="w-full lg:w-1/2 p-4">
+            <img class="w-full h-auto" src="img/main.webp" alt="Image of एलर्जी & अस्थमा">
+        </div>
+    </section>
 
 
 
 
-            </div>
-            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <div class="owl-carousel header-carousel">
-                    <div class="img-container">
-                        <img class="img-fluid" src="img/main3.webp" alt="">
+    <section class="py-20">
+        <div class="container w-2/3 mx-auto px-4">
+            <div class="bg-gradient-to-r from-green-100 to-blue-100 p-6 rounded-lg">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h1 class="text-black lg:font-bold text-5xl leading-tight mb-6 md:text-4xl">શું એલર્જી સારી થઈ
+                            શકે?</h1>
+                        <p class="text-black text-xl mb-8">એલર્જી શું છે? સમજીયે ..</p>
                     </div>
-                    <div class="img-container">
-                        <img class="img-fluid" src="img/main2.jpg" alt="">
-                    </div>
-                    <div class="img-container">
-                        <img class="img-fluid" src="img/main3.avif" alt="">
+                    <div class="md:w-2/5">
+                        <div class="relative">
+                            <iframe src="https://www.youtube.com/embed/EkUmIBqNaew"
+                                class="w-full h-60 md:h-96 rounded-lg shadow-lg" title="YouTube video player"
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+                                picture-in-picture" allowfullscreen>
+                            </iframe>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Header End -->
+    </section>
 
 
-    <!-- About Start -->
-    <!-- <div class="container-xxl py-5" id="about">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-flex flex-column">
-                        <img class="img-fluid rounded w-75 align-self-end" src="img/about-1.jpg" alt="">
-                        <img class="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/about-2.jpg" alt=""
-                            style="margin-top: -25%;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <p class="d-inline-block border rounded-pill py-1 px-4">અમારા વિશે</p>
-                    <h1 class="mb-4">એલર્જી શું છે ? સમજીયે ..</h1>
-                    <p style="line-height: 35px;">પમ્પ અને દવાઓથી કંટાળી ગયા હોઈ.
 
-                        એલર્જીમાં ક્યારેક સ્ટેરોઇડની દવાથી વજનમાં વધવું, રોગપ્રતિકારક શક્તિ ઘટવી જેવી આડસરોને ઘટાડવા
-                        માટે .
 
-                        શ્વાસની તકલીફમાં થતી ઇમરજન્સીને અટકાવવા માટે.
 
-                        દવાઓ વગરનુ તંદુરસ્ત જીવન જીવવા માટે.
 
-                        આની સાથે ઈમોશનલ અને લાઇફ કાઉન્સિલિંગ મેળવવા માટે .
-                    </p>
 
-                    <p><i class="far fa-check-circle text-success me-3"></i>ગુણવત્તા આરોગ્ય કાળજી</p>
-                    <p><i class="far fa-check-circle text-success me-3"></i>માત્ર લાયકાત ધરાવતા ડોકટરો</p>
-                    <p><i class="far fa-check-circle text-success me-3"></i>મેડિકલ સંશોધન પ્રોફેશનલ્સ</p>
 
-                </div>
-            </div>
+
+
+
+    <!-- hero section end -->
+
+
+
+    <section id="video" class="bg-gradient-to-r from-blue-50 to-teal-50 flex flex-col justify-items-center items-center">
+        <!-- Title Section -->
+        <div class="text-center py-10">
+            <h1 class="text-4xl font-bold text-black dark:text-white mb-4">
+                એલર્જી મુક્ત દર્દીઓનો અભિપ્રાય
+            </h1>
         </div>
-    </div> -->
 
-    <div class="container mx-auto">
-        
-        <div class="row justify-content-center">
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem; margin-bottom: 20px;">
-                    <div class="card-img-top">
-                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/EkUmIBqNaew"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-start">એલર્જી શું છે ? સમજીયે..</h5>
+        <!-- Content Section -->
+        <div class="px-8 mx-auto lg:max-w-screen-xl sm:max-w-xl md:max-w-full sm:px-12 sm:pb-10">
+            <div class="grid sm:grid-cols-4 gap-6 md:flex md:justify-center">
+                <div class="relative group flex justify-center">
+                    <div class="h-96">
+                        <video controls autoplay muted class="object-cover w-auto h-full">
+                            <source src="video/video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem; margin-bottom: 20px;">
-                    <div class="card-img-top">
-                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/EkUmIBqNaew"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-start">એલર્જી શું છે ? સમજીયે..</h5>
+                <div class="relative group flex justify-center">
+                    <div class="h-96">
+                        <video controls autoplay muted class="object-cover w-auto h-full">
+                            <source src="video/video2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-3">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-img-top">
-                        <iframe width="100%" height="200" src="https://www.youtube.com/embed/EkUmIBqNaew"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                <div class="relative group flex justify-center">
+                    <div class="h-96">
+                        <video controls autoplay muted class="object-cover w-auto h-full">
+                            <source src="video/video3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-start">એલર્જી શું છે ? સમજીયે..</h5>
+                </div>
+
+                <div class="relative group flex justify-center">
+                    <div class="h-96">
+                        <video controls autoplay muted class="object-cover w-auto h-full">
+                            <source src="video/video4.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container d-flex justify-content-end mt-5">
-            <a href="https://wa.me/919265424423?text=Hello%20there!" target="_blank" class="btn gradient-button">
-                દવાઓ માટે અહીં ક્લીક કરો
-            </a>
+
+
+
+
+
+    </section>
+
+
+
+    <!-- Container -->
+    <div class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
+
+        <!-- Image Column -->
+        <div class="w-full h-64 lg:w-1/2 lg:h-96 lg:mb-10">
+            <img class="h-full w-full object-contain  mt-10" src="./img/asthama.jpg" alt="Winding mountain road">
         </div>
-    </div>
+        <!-- Close Image Column -->
 
-
-
-
-    <!-- About End -->
-
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5" id="Service">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4">સેવાઓ</p>
-            </div>
-            <div class="d-flex justify-content-center text-center">
-                <ul class="">
-                    <li class="mb-3">ડોક્ટરને વોટ્સએપ પર રિપોર્ટ અથવા શેની એલર્જી છે, તે મેસેજ દ્રારા વાત કરવી</li>
-                    <li class="mb-3">ડોક્ટરને યોગ્ય લાગશે તો તમને ૩૦-૪૫ મિનીટનો સમય આપી, કેસ લેવામાં આવશે.</li>
-                    <li>ડૉક્ટર વિડિયો કોલ પર વાત કરશે, જેનાથી દર્દીની તકલીફને પૂર્ણ રીતે જાણી શકે.</li>
+        <!-- Text Column -->
+        <div
+            class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-45 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
+            <!-- Text Wrapper -->
+            <div class="flex flex-col p-12 md:px-16">
+                <h2 class="text-2xl font-medium uppercase text-green-800 lg:text-4xl">આ સારવાર કોના માટે છે ?</h2>
+                <ul class="list-disc mt-4 pl-5">
+                    <li>પમ્પ અને દવાઓથી કંટાળી ગયા હોઈ.</li>
+                    <li>એલર્જીમાં ક્યારેક સ્ટેરોઇડની દવાથી વજનમાં વધવું, રોગપ્રતિકારક શક્તિ ઘટવી જેવી આડસરોને ઘટાડવા
+                        માટે.</li>
+                    <li>શ્વાસની તકલીફમાં થતી ઇમરજન્સીને અટકાવવા માટે.</li>
+                    <li>દવાઓ વગરનુ તંદુરસ્ત જીવન જીવવા માટે.</li>
+                    <li>આની સાથે ઈમોશનલ અને લાઇફ કાઉન્સિલિંગ મેળવવા માટે.</li>
                 </ul>
             </div>
+            <!-- Close Text Wrapper -->
         </div>
-        <div class="container d-flex justify-content-start mt-5">
-            <a href="https://wa.me/919265424423?text=Hello%20there!" target="_blank" class="btn gradient-button">
-                દવાઓ માટે અહીં ક્લીક કરો
-            </a>
-        </div>
+        <!-- Close Text Column -->
+
     </div>
 
-    <!-- Service End -->
 
 
 
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5" style="background-color: #f4f6f9;">
-        <div class="container">
-           
-            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
-                <p class=" py-1 px-4">ડોક્ટર</p>
-                <h1>અમારા અનુભવી ડોક્ટર</h1>
-            </div>
-            <div class="g-1 d-flex justify-content-center">
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class=" d-flex align-items-center justify-content-center rounded overflow-hidden ">
-                        <div class="">
-                            <img class=" rounded-start" src="img/doctor.jpg" alt="Dr Pratik Sorathiya"
-                                style="width: 200px; height: auto;">
-                        </div>
-                        <div class="team-text  text-start p-4"
-                            style="margin-left: 20px; text-align: center; display: flex; flex-direction: column;   ">
-                            <h5>Dr Pratik Sorathiya</h5>
-                            <p class="text-success">BHMS (INDIA)</p>
-                            <p class="text-success">SCPH (UNITED KINGDOM)</p>
-                            <p class="text-success">SCPH PLUS (UK)</p>
-                            <div class="team-social" style="color: #4a7c3c; display: flex; flex-direction: row;">
-                                <a class="btn btn-square" style="color: #4a7c3c;" href=""><i
-                                        class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" style="color: #4a7c3c;" href=""><i
-                                        class="fab fa-youtube"></i></a>
-                                <a class="btn btn-square" style="color: #4a7c3c;" href=""><i
-                                        class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
+    <section class="flex items-center justify-center">
+        <div class="w-5/6 mt-10">
+            <div class="container mx-auto py-4 px-4 md:px-0 md:flex md:justify-center md:items-center">
+                <div class="md:w-1/2 lg:w-2/3 flex justify-center">
+                    <img src="./img/four.jpg" alt="Responsive Design" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 lg:w-1/3 md:mr-8 mt-8 ml-6 md:mt-0">
+                    <h1 class="text-4xl lg:text-4xl font-bold mb-4 text-center">કેવા કેવા પ્રકારની એલર્જી હોઈ શકે</h1>
+                    <div class="text-center">
+                        <p class="text-lg mb-4">એલર્જીઓ ઘણા પ્રકારની હોઈ શકે છે. દરેક વ્યક્તિને અલગ-અલગ પ્રકારની એલર્જી
+                            હોઈ શકે છે, અને એલર્જીની લક્ષણો પણ વ્યક્તિગત રીતે અલગ હોઈ શકે છે.</p>
                     </div>
                 </div>
             </div>
-            <div class="container d-flex justify-content-end mt-5">
-                <a href="https://wa.me/919265424423?text=Hello%20there!" target="_blank" class="btn gradient-button">
+        </div>
+    </section>
+
+
+
+    <!-- profile start -->
+
+
+
+
+    <div id="Contact" class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+        <!-- Main Col -->
+        <div id="profile"
+            class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
+            <div class="p-4 md:p-12 text-center lg:text-left">
+                <h1 class="text-3xl font-bold pt-8 lg:pt-0">Dr Pratik Sorathiya</h1>
+                <div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-green-500 opacity-25"></div>
+                <p class="pt-4 text-base font-bold flex items-center justify-center lg:justify-start">
+                    <svg class="h-4 fill-current text-green-700 pr-4" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20">
+                        <path
+                            d="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z" />
+                    </svg> BHMS (INDIA)<br>
+                    SCPH (UNITED KINGDOM)<br>
+                    SCPH PLUS (UK)
+                </p>
+                <p class="pt-8 text-sm">ડો. પ્રતિક સોરઠિયા એલર્જી & અસ્થમા વાળા દર્દીઓ માટે સેવા આપી રહ્યા છે. તેઓ
+                    અત્યાર સુધી એલર્જી & અસ્થમાથી પીડાતા ઘણા દર્દીઓને સેવા આપી ચુક્યા છે.</p>
+                <p class="text-sm">તેઓ છેલ્લા 6 વર્ષથી હોમિયોપેથી સાથે સંકળાયેલા છે</p>
+                <div
+                    class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full flex flex-wrap items-center gap-4 sm:flex sm:items-center sm:justify-center">
+                    <a class="btn btn-square" href="https://www.facebook.com/share/VepQk5ajbDCDtjQy/?mibextid=LQQJ4d"
+                        target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square" href="https://youtube.com/@sahajanandallergyclinic?si=lUifzTGoqMmFKVBt"
+                        target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-square" href="https://www.instagram.com/sahajanand_allergy_clinic?utm_source=qr"
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-square" href="https://wa.me/919265424423?text=Hello%20there!" target="_blank"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Img Col -->
+        <div class="w-full lg:w-2/5">
+            <img src="./img/doctor.jpg" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block">
+        </div>
+    </div>
+    <!-- <div class="absolute top-0 right-0 h-12 w-18 p-4">
+        <button class="js-change-theme focus:outline-none">🌙</button>
+    </div> -->
+
+
+    <!-- profile end -->
+
+
+    <section class="px-3 py-5 bg-gradient-to-r from-blue-100 to-teal-100 lg:py-10">
+        <div class="grid lg:grid-cols-2 items-center justify-items-center gap-5">
+            <!-- Text content -->
+            <div class="order-2 lg:order-1 flex flex-col justify-center items-center text-center lg:text-left">
+                <p class="text-2xl ml-5 font-bold md:text-4xl text-black-600">એલર્જીમાં આશીર્વાદરૂપ આ દવાઓ ક્યાંથી મળશે.
+                </p>
+                <p class="mt-10 text-sm md:text-lg">ડોક્ટરને વોટ્સએપ પર રિપોર્ટ અથવા શેની એલર્જી છે , તે મેસેજ દ્રારા
+                    વાત
+                    કરવી.</p>
+                <p class="mt-2 text-sm md:text-lg">ડોક્ટરને યોગ્ય લાગશે તો તમને ૩૦-૪૫ મિનીટનો સમય આપી, કેસ લેવામાં આવશે.
+                </p>
+                <p class="mt-2 text-sm md:text-lg">ડૉક્ટર વિડિયો કોલ પર વાત કરશે, જેનાથી દર્દીની તકલીફને
+                    પૂર્ણ રીતે જાણી શકે.
+                </p>
+
+                <a href="https://wa.me/919265424423?text=Hello%20there!" target="_blank"
+                    class="text-lg md:text-1xl bg-zinc-800 text-white py-2 px-5 mt-10 hover:bg-zinc-800">
                     દવાઓ માટે અહીં ક્લીક કરો
                 </a>
             </div>
-        </div>
-    </div>
 
-
-    <!-- Team End -->
-
-
-    <!-- vidio gallery  Start-->
-    <!-- 
-    <div id="portfolio-gallery" class="portfolio-container">
-        <article class="portfolio-item">
-            <div class="project-container">
-                <video controls autoplay muted>
-                    <source src="video/video1.MOV" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </article>
-    
-        <article class="portfolio-item">
-            <div class="project-container">
-                <video controls autoplay muted>
-                    <source src="video/video2.MOV" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </article>
-    
-        <article class="portfolio-item">
-            <div class="project-container">
-                <video controls autoplay muted>
-                    <source src="video/video3.MOV" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </article>
-    
-    
-    </div> -->
-
-
-    <!-- <div class="grid" id="video">
-        <div class="grid-item">
-            <div class="project-container">
-                <video controls autoplay muted>
-                    <source src="video/video1.MOV" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <!-- Image content -->
+            <div class="order-1 lg:order-2">
+                <img class="h-80 w-auto object-cover lg:w-[500px] lg:h-[500px]" src="./img/davao.webp"
+                    alt="Product Image">
             </div>
         </div>
-
-        <div class="grid-item">
-            <div class="project-container">
-                <video controls autoplay muted>
-                    <source src="video/video2.MOV" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-
-        <div class="grid-item">
-            <div class="project-container">
-                <video controls autoplay muted>
-                    <source src="video/video3.MOV" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div> -->
+    </section>
 
 
 
 
+    <!-- about as start -->
 
 
 
+    <form onsubmit="sendMessage(); return false;">
+        <section class="text-gray-600 body-font relative bg-white">
+            <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+                <!-- Map Section -->
+                <div
+                    class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+                    <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map"
+                        marginheight="0" marginwidth="0" scrolling="no"
+                        src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d210.33519208458839!2d72.88890223285806!3d21.2379048650023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d21.237873999999998!2d72.88901179999999!4m3!3m2!1d21.237873999999998!2d72.88901179999999!5e1!3m2!1sen!2sin!4v1727765483330!5m2!1sen!2sin"
+                        style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
 
-
-
-    <!-- vidio gallery  end-->
-
-
-
-
-
-
-    <!-- contact-page -->
-
-    <!-- <div class="container contact-page" ></div> -->
-    <div class="text-center mb-5" id="contact">
-        <h1>Contact Us</h1>
-
-    </div>
-
-    <div class=" contact-info  text-center" style="display: flex; align-items: center; justify-content: space-evenly;">
-        <div class="col-md-4">
-            <a href="https://g.co/kgs/WgaRZ1e" target="_blank"
-                class="d-flex flex-column align-items-center text-decoration-none" style="color: inherit;">
-                <i class="fa fa-map-marker-alt" style="font-size: 48px; color: #4a7c3c;"></i>
-                <div class="text-center mt-3">
-                    <h5>Our Address</h5>
-                    <p>૧૪૭, પહેલો માળ, ઓપેરા બિઝનેસ હબ, સેટેલાઈટ રોડ, લજામણી ચોક, મોટા વરાછા, સુરત.</p>
-                </div>
-            </a>
-        </div>
-        <div class="col-md-4">
-            <i class="fa fa-phone-alt"></i>
-            <h5>Phone</h5>
-            <p><a href="tel:+9265424423">+91-92654 24423
-                </a></p>
-        </div>
-        <div class="col-md-4">
-            <i class="fa fa-envelope"></i>
-            <h5>Email</h5>
-            <p><a href="mailto:info@yourdomain.com">sorathiyap90@gmail.com</a></p>
-        </div>
-    </div>
-
-
-    </div>
-
-    <!-- contact-page -->
-
-
-    <!-- Modal Structure -->
-    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="appointmentModalLabel">Book an Appointment</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="appointmentForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">નામ</label>
-                            <input type="text" class="form-control" id="name" required>
+                    <!-- Contact Details -->
+                    <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+                        <div class="lg:w-1/2 px-6">
+                            <h2 class="title-font font-semibold text-black tracking-widest text-xs">ADDRESS</h2>
+                            <p class="mt-1 text-black">૧૪૭, પહેલો માળ, ઓપેરા બિઝનેસ હબ, સેટેલાઈટ રોડ, લજામણી ચોક, મોટા
+                                વરાછા, સુરત.
+                            </p>
                         </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">મોબાઈલ નં</label>
-                            <input type="tel" class="form-control" id="phone" required>
+                        <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                            <div class="gap-10">
+                                <a class="btn btn-square"
+                                    href="https://www.facebook.com/share/VepQk5ajbDCDtjQy/?mibextid=LQQJ4d"
+                                    target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square"
+                                    href="https://youtube.com/@sahajanandallergyclinic?si=lUifzTGoqMmFKVBt"
+                                    target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-square"
+                                    href="https://www.instagram.com/sahajanand_allergy_clinic?utm_source=qr"
+                                    target="_blank"><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-square" href="https://wa.me/919265424423?text=Hello%20there!"
+                                    target="_blank"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+                            <p class="leading-relaxed text-black">92654 24423</p>
                         </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">
-                                મેસેજ
-                            </label>
-                            <textarea class="form-control" id="message" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Structure -->
-
-
-
-    <!-- Footer Start -->
-    <div class="  text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s"
-    style="background: linear-gradient(45deg, #4a7c3c, #6ab04c, #3a5f2b); display: flex; flex-direction:column;">
-        <div class="container py-5" style="display: flex; justify-content: space-between;  align-items: center;">
-            <div class="row g-6"
-                style="display: flex; align-items: center; justify-content: space-between; width: 100%">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p class="mb-3"><i class="fa fa-map-marker-alt me-3"></i>૧૪૭, પહેલો માળ, ઓપેરા બિઝનેસ હબ, સેટેલાઈટ
-                        રોડ, લજામણી ચોક, મોટા વરાછા, સુરત.</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-92654 24423
-                    </p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-
-                        <a class="btn btn-outline-light btn-social rounded-circle"
-                            href="https://youtu.be/EkUmIBqNaew?si=o6H9iYvWNmTgrZfO" target="_blank"
-                            rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href="https://www.instagram.com/reel/C6JyfjvyR5t/?igsh=Nm9sbHIwMGRzYXhj
-                                " target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-instagram"></i>
-                        </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6"
-                    style="display: flex; flex-direction:column; align-items: center; justify-content: space-evenly; color: white;">
-                    <h5 class="text-light mb-4">Services</h5>
-                    <p>એલર્જી</p>
-                    <p>સ્ત્રી રોગ</p>
-                    <p>બાળ રોગ</p>
-                    <p>ચામડીના રોગો</p>
-                    <p>ડાયાબિટીસ</p>
+
+                <!-- Form Section -->
+                <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+                    <h2 class="text-gray-900 text-2xl font-bold mb-1 title-font">Appointment</h2>
+                    <div class="relative mb-4">
+                        <label for="name" class="leading-7 text-sm text-gray-600">નામ</label>
+                        <input required type="text" id="name" name="name"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="mobile" class="leading-7 text-sm text-gray-600">મોબાઈલ નં</label>
+                        <input required type="text" id="mobile" name="mobile"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="message" class="leading-7 text-sm text-gray-600">બીમારી</label>
+                        <textarea required id="message" name="message"
+                            class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="text-white bg-zinc-800 border-0 py-2 px-6 focus:outline-none hover:bg-zinc-800 rounded text-lg">
+                        Send
+                    </button>
                 </div>
-                <div class="col-lg-3 col-md-6"
-                    style="display: flex; flex-direction:column; align-items: center; justify-content: space-evenly;">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a style="color: white;" class="btn" href="#about">About Us</a>
-                    <a style="color: white;" class="btn" href="#contact">Contact Us</a>
-                    <a style="color: white;" class="btn" href="#Service">Our Services</a>
+            </div>
+        </section>
+    </form>
 
-                    <a style="color: white;" class="btn" href="#video">video</a>
 
+
+
+
+    <div class="bg-gray-100">
+        <div class="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 mx-auto">
+            <div class="flex flex-col sm:flex-row justify-between">
+                <div class="p-5 sm:w-2/12 border-b sm:border-b-0 sm:border-r">
+                    <div class="text-sm uppercase text-indigo-400 font-bold">Menu</div>
+                    <ul>
+                        <li class="my-2">
+                            <a class="hover:text-gray-600" href="#">Home</a>
+                        </li>
+                        <li class="my-2">
+                            <a class="hover:text-gray-600" href="#">Services</a>
+                        </li>
+                        <li class="my-2">
+                            <a class="hover:text-gray-600" href="#">Videos</a>
+                        </li>
+                        <li class="my-2">
+                            <a class="hover:text-gray-600" href="#">Contact</a>
+                        </li>
+                    </ul>
                 </div>
-
+                <div class="p-5 sm:w-7/12 border-b sm:border-b-0 sm:border-r text-center">
+                    <h3 class="font-bold text-xl text-indigo-400 mb-4">Componentity</h3>
+                    <p class="text-gray-500 text-sm mb-10">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div class="p-5 sm:w-3/12">
+                    <div class="text-sm uppercase text-indigo-400 font-bold">Contact Us</div>
+                    <ul>
+                        <li class="my-2">
+                            <a class="hover:text-gray-600" href="#">147, First Floor, Opera Business Hub, Satellite Road, Lajamani
+                                Chowk, Mota Varachha, Surat.</a>
+                        </li>
+                        <li class="my-2">
+                            <a class="hover:text-gray-600" href="#">+91-92654 24423</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="container">
-            <div class="footer">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom custom-link">sahajanand_allergy_clinic</a>, All Rights
-                        Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-
-                    </div>
+        <div class="flex py-5 m-auto text-gray-800 text-sm flex-col items-center border-t max-w-screen-xl">
+            <div class="w-full flex flex-col md:flex-row md:justify-between mt-2">
+                <div class="flex flex-row gap-8 mb-2 md:mb-0">
+                    <a class="text-2xl" href="https://www.facebook.com/share/VepQk5ajbDCDtjQy/?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="text-2xl" href="https://youtube.com/@sahajanandallergyclinic?si=lUifzTGoqMmFKVBt" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="text-2xl" href="https://www.instagram.com/sahajanand_allergy_clinic?utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="text-2xl" href="https://wa.me/919265424423?text=Hello%20there!" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
+                <div class="my-5">© Copyright 2024. All Rights Reserved.</div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+    
 
 
-    <!-- Back to Top -->
 
 
-    <a href="#" class="btn btn-lg btn-secondary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="/path/to/masonry.pkgd.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+
+
+
+
+
+    <!-- Mobile Menu Toggle Script -->
     <script>
-        document.getElementById('appointmentForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            // Get the form data
-            var name = document.getElementById('name').value;
-            var phone = document.getElementById('phone').value;
-            var message = document.getElementById('message').value;
-
-            // Construct the WhatsApp message
-            var whatsappMessage = `Hello, my name is ${name}. My phone number is ${phone}. Message: ${message}`;
-
-            // Redirect to WhatsApp with the message
-            var whatsappUrl = `https://wa.me/9265424423?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappUrl, '_blank');
+        document.getElementById('menu-btn').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
         });
     </script>
 
+
+    <script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@4"></script>
+    <script>
+        //Init tooltips
+        tippy('.link', {
+            placement: 'bottom'
+        })
+
+        //Toggle mode
+        const toggle = document.querySelector('.js-change-theme');
+        const body = document.querySelector('body');
+        const profile = document.getElementById('profile');
+
+
+        toggle.addEventListener('click', () => {
+
+            if (body.classList.contains('text-gray-900')) {
+                toggle.innerHTML = "☀️";
+                body.classList.remove('text-gray-900');
+                body.classList.add('text-gray-100');
+                profile.classList.remove('bg-white');
+                profile.classList.add('bg-gray-900');
+            } else {
+                toggle.innerHTML = "🌙";
+                body.classList.remove('text-gray-100');
+                body.classList.add('text-gray-900');
+                profile.classList.remove('bg-gray-900');
+                profile.classList.add('bg-white');
+
+            }
+        });
+
+    </script>
+
+    <script>
+        function sendMessage() {
+            // Get form values
+            var name = document.getElementById('name').value.trim();
+            var mobile = document.getElementById('mobile').value.trim();
+            var message = document.getElementById('message').value.trim();
+
+            // Input validation
+            if (!name || !mobile || !message) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            // Construct WhatsApp message
+            var whatsappMessage = `નામ: ${name}%0Aમોબાઈલ: ${mobile}%0Aબીમારી: ${message}`;
+
+            // Open WhatsApp chat with pre-filled message after a short delay
+            var whatsappUrl = `https://wa.me/919265424423?text=${whatsappMessage}`;
+
+            // Add a short delay before opening the link
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 100); // 100 milliseconds delay
+        }
+    </script>
 </body>
 
 </html>

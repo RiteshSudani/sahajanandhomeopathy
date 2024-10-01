@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/path/to/fonts/custom-font.woff2') format('woff2'),
+         url('/path/to/fonts/custom-font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.custom-font {
+    font-family: 'CustomFont', sans-serif;
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+}
+
+
