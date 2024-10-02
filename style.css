@@ -14,4 +14,19 @@ body {
     font-family: 'CustomFont', sans-serif;
 }
 
+@layer utilities {
+    .video-element:fullscreen,
+    .video-element:-webkit-full-screen,
+    .video-element:-moz-full-screen,
+    .video-element:-ms-fullscreen {
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain; /* Maintain aspect ratio but fit the screen */
+      z-index: 9999;
+    }
+  }
+  
 
+
+
+  

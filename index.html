@@ -22,16 +22,19 @@
                     <!-- Changed to text-black -->
                 </div>
                 <div class="hidden sm:flex sm:flex-1 sm:justify-center">
-                    <div class="flex space-x-4">
-                        <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                            aria-current="page">Home Page</a>
-                        <a href="#"
+                    <div class="flex space-x-4" id="nav-menu">
+                        <a href="#Home" id="homeBtn"
+                            class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                            aria-current="page">Home</a>
+                        <a href="#" id="serviceBtn"
                             class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black">Service</a>
-                        <a href="#video"
+                        <a href="#" id="videosBtn"
                             class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black">Videos</a>
-                        <a href="#Contact"
+                        <a href="#" id="contactBtn"
                             class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black">Contact</a>
                     </div>
+
+
                 </div>
                 <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                     <button id="menu-btn" type="button"
@@ -55,14 +58,14 @@
         <!-- Mobile menu -->
         <div class="hidden sm:hidden" id="mobile-menu">
             <div class="flex flex-col items-center space-y-1 px-2 pb-3 pt-2">
-                <a href="#"
-                    class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Dashboard</a>
-                <a href="#"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Team</a>
-                <a href="#"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Projects</a>
-                <a href="#"
-                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Calendar</a>
+                <a href="#" id="mobileHomeBtn" onclick="setActive('mobileHomeBtn')"
+                    class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Home</a>
+                <a href="#" id="mobileServiceBtn" onclick="setActive('mobileServiceBtn')"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Service</a>
+                <a href="#" id="mobileVideosBtn" onclick="setActive('mobileVideosBtn')"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Videos</a>
+                <a href="#" id="mobileContactBtn" onclick="setActive('mobileContactBtn')"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Contact</a>
             </div>
         </div>
     </nav>
@@ -70,7 +73,7 @@
     <!-- hero section start -->
 
 
-    <section class="flex flex-col lg:flex-row w-full">
+    <section class="flex flex-col lg:flex-row w-full" id="Home">
         <!-- Text Section -->
         <div class="w-full flex justify-center items-center lg:w-1/2 p-4 text-center">
             <p class="text-black text-center text-4xl md:text-6xl lg:text-7xl p-4 font-poppins">
@@ -95,6 +98,10 @@
                         <h1 class="text-black lg:font-bold text-5xl leading-tight mb-6 md:text-4xl">શું એલર્જી સારી થઈ
                             શકે?</h1>
                         <p class="text-black text-xl mb-8">એલર્જી શું છે? સમજીયે ..</p>
+                        <a href="https://wa.me/919265424423?text=Hello%20there!" target="_blank"
+                            class="text-lg md:text-1xl bg-zinc-800 text-white py-2 px-5 mt-10 hover:bg-zinc-800">
+                            દવાઓ માટે અહીં ક્લીક કરો
+                        </a>
                     </div>
                     <div class="md:w-2/5">
                         <div class="relative">
@@ -124,7 +131,7 @@
 
 
 
-    <section id="video" class="bg-gradient-to-r from-blue-50 to-teal-50 flex flex-col justify-items-center items-center">
+    <section class="bg-gradient-to-r from-blue-50 to-teal-50 flex flex-col justify-items-center items-center">
         <!-- Title Section -->
         <div class="text-center py-10">
             <h1 class="text-4xl font-bold text-black dark:text-white mb-4">
@@ -135,36 +142,40 @@
         <!-- Content Section -->
         <div class="px-8 mx-auto lg:max-w-screen-xl sm:max-w-xl md:max-w-full sm:px-12 sm:pb-10">
             <div class="grid sm:grid-cols-4 gap-6 md:flex md:justify-center">
+                <!-- Video 1 -->
                 <div class="relative group flex justify-center">
-                    <div class="h-96">
-                        <video controls autoplay muted class="object-cover w-auto h-full">
+                    <div class="video-container">
+                        <video controls autoplay muted class="video-element w-full h-full object-contain">
                             <source src="video/video1.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
 
+                <!-- Video 2 -->
                 <div class="relative group flex justify-center">
-                    <div class="h-96">
-                        <video controls autoplay muted class="object-cover w-auto h-full">
+                    <div class="video-container">
+                        <video controls autoplay muted class="video-element w-full h-full object-contain">
                             <source src="video/video2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
 
+                <!-- Video 3 -->
                 <div class="relative group flex justify-center">
-                    <div class="h-96">
-                        <video controls autoplay muted class="object-cover w-auto h-full">
+                    <div class="video-container">
+                        <video controls autoplay muted class="video-element w-full h-full object-contain">
                             <source src="video/video3.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
                 </div>
 
+                <!-- Video 4 -->
                 <div class="relative group flex justify-center">
-                    <div class="h-96">
-                        <video controls autoplay muted class="object-cover w-auto h-full">
+                    <div class="video-container">
+                        <video controls autoplay muted class="video-element w-full h-full object-contain">
                             <source src="video/video4.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -177,38 +188,41 @@
 
 
 
+
+
     </section>
 
 
 
     <!-- Container -->
     <div class="relative flex flex-col items-center mx-auto lg:flex-row-reverse lg:max-w-5xl lg:mt-12 xl:max-w-6xl">
-
         <!-- Image Column -->
-        <div class="w-full h-64 lg:w-1/2 lg:h-96 lg:mb-10">
-            <img class="h-full w-full object-contain  mt-10" src="./img/asthama.jpg" alt="Winding mountain road">
+        <div class="w-full h-64 mt-10 lg:w-1/2 lg:h-96 lg:mb-10">
+            <img class="h-full w-full object-contain" src="./img/asthama.jpg" alt="Winding mountain road">
         </div>
-        <!-- Close Image Column -->
 
         <!-- Text Column -->
         <div
-            class="max-w-lg bg-white md:max-w-2xl md:z-10 md:shadow-lg md:absolute md:top-0 md:mt-45 lg:w-3/5 lg:left-0 lg:mt-20 lg:ml-20 xl:mt-24 xl:ml-12">
+            class="w-full lg:w-1/2 bg-white shadow-lg p-6 lg:p-12 lg:absolute lg:left-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 lg:ml-12 xl:ml-20">
             <!-- Text Wrapper -->
-            <div class="flex flex-col p-12 md:px-16">
-                <h2 class="text-2xl font-medium uppercase text-green-800 lg:text-4xl">આ સારવાર કોના માટે છે ?</h2>
-                <ul class="list-disc mt-4 pl-5">
+            <div class="flex flex-col items-center">
+                <h2 class="text-3xl font-medium uppercase text-green-800 lg:text-4xl">
+                    આ સારવાર કોના માટે છે ?
+                </h2>
+                <ul class="list-disc mt-4 pl-5 text-lg lg:text-xl xl:text-2xl">
                     <li>પમ્પ અને દવાઓથી કંટાળી ગયા હોઈ.</li>
                     <li>એલર્જીમાં ક્યારેક સ્ટેરોઇડની દવાથી વજનમાં વધવું, રોગપ્રતિકારક શક્તિ ઘટવી જેવી આડસરોને ઘટાડવા
                         માટે.</li>
                     <li>શ્વાસની તકલીફમાં થતી ઇમરજન્સીને અટકાવવા માટે.</li>
                     <li>દવાઓ વગરનુ તંદુરસ્ત જીવન જીવવા માટે.</li>
-                    <li>આની સાથે ઈમોશનલ અને લાઇફ કાઉન્સિલિંગ મેળવવા માટે.</li>
+                    <li>આની સાથે ઈમોશનલ અને લાઇફ કાઉન્સિલિંગ મેળવવા માટે.</li>
                 </ul>
+                <a href="https://wa.me/919265424423?text=Hello%20there!" target="_blank"
+                    class="text-lg md:text-1xl w-60 bg-zinc-800 text-white py-2 px-5 mt-10 hover:bg-zinc-800">
+                    દવાઓ માટે અહીં ક્લીક કરો
+                </a>
             </div>
-            <!-- Close Text Wrapper -->
         </div>
-        <!-- Close Text Column -->
-
     </div>
 
 
@@ -223,8 +237,13 @@
                 <div class="md:w-1/2 lg:w-1/3 md:mr-8 mt-8 ml-6 md:mt-0">
                     <h1 class="text-4xl lg:text-4xl font-bold mb-4 text-center">કેવા કેવા પ્રકારની એલર્જી હોઈ શકે</h1>
                     <div class="text-center">
-                        <p class="text-lg mb-4">એલર્જીઓ ઘણા પ્રકારની હોઈ શકે છે. દરેક વ્યક્તિને અલગ-અલગ પ્રકારની એલર્જી
+                        <p class="lg:text-2xl sm:text-xl mb-4">એલર્જીઓ ઘણા પ્રકારની હોઈ શકે છે. દરેક વ્યક્તિને અલગ-અલગ
+                            પ્રકારની એલર્જી
                             હોઈ શકે છે, અને એલર્જીની લક્ષણો પણ વ્યક્તિગત રીતે અલગ હોઈ શકે છે.</p>
+                        <a href="https://wa.me/919265424423?text=Hello%20there!" target="_blank"
+                            class="text-lg md:text-1xl bg-zinc-800 text-white py-2 px-5 mt-10 hover:bg-zinc-800">
+                            દવાઓ માટે અહીં ક્લીક કરો
+                        </a>
                     </div>
                 </div>
             </div>
@@ -238,7 +257,7 @@
 
 
 
-    <div id="Contact" class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
+    <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
         <!-- Main Col -->
         <div id="profile"
             class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
@@ -254,18 +273,18 @@
                     SCPH (UNITED KINGDOM)<br>
                     SCPH PLUS (UK)
                 </p>
-                <p class="pt-8 text-sm">ડો. પ્રતિક સોરઠિયા એલર્જી & અસ્થમા વાળા દર્દીઓ માટે સેવા આપી રહ્યા છે. તેઓ
+                <p class="pt-8 text-lg">ડો. પ્રતિક સોરઠિયા એલર્જી & અસ્થમા વાળા દર્દીઓ માટે સેવા આપી રહ્યા છે. તેઓ
                     અત્યાર સુધી એલર્જી & અસ્થમાથી પીડાતા ઘણા દર્દીઓને સેવા આપી ચુક્યા છે.</p>
-                <p class="text-sm">તેઓ છેલ્લા 6 વર્ષથી હોમિયોપેથી સાથે સંકળાયેલા છે</p>
+                <p class="text-lg">તેઓ છેલ્લા 6 વર્ષથી હોમિયોપેથી સાથે સંકળાયેલા છે</p>
                 <div
                     class="mt-6 pb-16 lg:pb-0 w-4/5 lg:w-full flex flex-wrap items-center gap-4 sm:flex sm:items-center sm:justify-center">
-                    <a class="btn btn-square" href="https://www.facebook.com/share/VepQk5ajbDCDtjQy/?mibextid=LQQJ4d"
+                    <a class="text-2xl" href="https://www.facebook.com/share/VepQk5ajbDCDtjQy/?mibextid=LQQJ4d"
                         target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square" href="https://youtube.com/@sahajanandallergyclinic?si=lUifzTGoqMmFKVBt"
+                    <a class="text-2xl" href="https://youtube.com/@sahajanandallergyclinic?si=lUifzTGoqMmFKVBt"
                         target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="btn btn-square" href="https://www.instagram.com/sahajanand_allergy_clinic?utm_source=qr"
+                    <a class="text-2xl" href="https://www.instagram.com/sahajanand_allergy_clinic?utm_source=qr"
                         target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-square" href="https://wa.me/919265424423?text=Hello%20there!" target="_blank"><i
+                    <a class="text-2xl" href="https://wa.me/919265424423?text=Hello%20there!" target="_blank"><i
                             class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
@@ -324,37 +343,12 @@
             <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
                 <!-- Map Section -->
                 <div
-                    class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-                    <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map"
-                        marginheight="0" marginwidth="0" scrolling="no"
-                        src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d210.33519208458839!2d72.88890223285806!3d21.2379048650023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e0!4m3!3m2!1d21.237873999999998!2d72.88901179999999!4m3!3m2!1d21.237873999999998!2d72.88901179999999!5e1!3m2!1sen!2sin!4v1727765483330!5m2!1sen!2sin"
-                        style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
-
-                    <!-- Contact Details -->
-                    <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
-                        <div class="lg:w-1/2 px-6">
-                            <h2 class="title-font font-semibold text-black tracking-widest text-xs">ADDRESS</h2>
-                            <p class="mt-1 text-black">૧૪૭, પહેલો માળ, ઓપેરા બિઝનેસ હબ, સેટેલાઈટ રોડ, લજામણી ચોક, મોટા
-                                વરાછા, સુરત.
-                            </p>
-                        </div>
-                        <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-                            <div class="gap-10">
-                                <a class="btn btn-square"
-                                    href="https://www.facebook.com/share/VepQk5ajbDCDtjQy/?mibextid=LQQJ4d"
-                                    target="_blank"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square"
-                                    href="https://youtube.com/@sahajanandallergyclinic?si=lUifzTGoqMmFKVBt"
-                                    target="_blank"><i class="fab fa-youtube"></i></a>
-                                <a class="btn btn-square"
-                                    href="https://www.instagram.com/sahajanand_allergy_clinic?utm_source=qr"
-                                    target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square" href="https://wa.me/919265424423?text=Hello%20there!"
-                                    target="_blank"><i class="fab fa-whatsapp"></i></a>
-                            </div>
-                            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
-                            <p class="leading-relaxed text-black">92654 24423</p>
-                        </div>
+                    class="lg:w-2/3 md:w-full bg-gray-300 rounded-lg overflow-hidden sm:mr-4 p-10 flex items-end justify-start relative">
+                    <div class="sm:w-full h-64 w-64 md:h-full"> <!-- Set height for smaller screens -->
+                        <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map"
+                            marginheight="0" marginwidth="0" scrolling="no"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3365.3637075930287!2d72.88643887472003!3d21.237877080564346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04fa0b44e199f%3A0xb2b2adaf3c125594!2sOpera%20Business%20Hub!5e1!3m2!1sen!2sin!4v1727858372263!5m2!1sen!2sin">
+                        </iframe>
                     </div>
                 </div>
 
@@ -390,57 +384,77 @@
 
 
     <div class="bg-gray-100">
-        <div class="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 mx-auto">
-            <div class="flex flex-col sm:flex-row justify-between">
-                <div class="p-5 sm:w-2/12 border-b sm:border-b-0 sm:border-r">
-                    <div class="text-sm uppercase text-indigo-400 font-bold">Menu</div>
-                    <ul>
-                        <li class="my-2">
-                            <a class="hover:text-gray-600" href="#">Home</a>
-                        </li>
-                        <li class="my-2">
-                            <a class="hover:text-gray-600" href="#">Services</a>
-                        </li>
-                        <li class="my-2">
-                            <a class="hover:text-gray-600" href="#">Videos</a>
-                        </li>
-                        <li class="my-2">
-                            <a class="hover:text-gray-600" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="p-5 sm:w-7/12 border-b sm:border-b-0 sm:border-r text-center">
-                    <h3 class="font-bold text-xl text-indigo-400 mb-4">Componentity</h3>
-                    <p class="text-gray-500 text-sm mb-10">Lorem Ipsum is simply dummy text of the printing and typesetting
-                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                </div>
-                <div class="p-5 sm:w-3/12">
-                    <div class="text-sm uppercase text-indigo-400 font-bold">Contact Us</div>
-                    <ul>
-                        <li class="my-2">
-                            <a class="hover:text-gray-600" href="#">147, First Floor, Opera Business Hub, Satellite Road, Lajamani
-                                Chowk, Mota Varachha, Surat.</a>
-                        </li>
-                        <li class="my-2">
-                            <a class="hover:text-gray-600" href="#">+91-92654 24423</a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="max-w-screen-lg py-10 px-4 sm:px-6 text-gray-800 sm:flex justify-between mx-auto sm:items-center">
+            <!-- Menu Section -->
+            <div class="p-5 sm:w-2/12 sm:border-r">
+                <div class="text-sm uppercase text-indigo-400 font-bold">Menu</div>
+                <ul>
+                    <li class="my-2">
+                        <a class="hover:text-gray-600" href="#">Home</a>
+                    </li>
+                    <li class="my-2">
+                        <a class="hover:text-gray-600" href="#">Services</a>
+                    </li>
+                    <li class="my-2">
+                        <a class="hover:text-gray-600" href="#">Videos</a>
+                    </li>
+                    <li class="my-2">
+                        <a class="hover:text-gray-600" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content Section -->
+            <div class="p-5 sm:w-7/12 sm:border-r text-center">
+                <a href="https://wa.me/919265424423?text=Hello%20there!" target="_blank"
+                    class="text-lg md:text-1xl bg-zinc-800 text-white py-2 px-5 mt-10 hover:bg-zinc-800">
+                    દવાઓ માટે અહીં ક્લીક કરો
+                </a>
+            </div>
+
+            <!-- Contact Us Section -->
+            <div class="p-5 sm:w-3/12 text-center sm:text-left">
+                <div class="text-sm uppercase text-indigo-400 font-bold">Contact Us</div>
+                <ul>
+                    <li class="my-2">
+                        <a class="hover:text-gray-600" href="#">૧૪૭, પહેલો માળ, ઓપેરા બિઝનેસ હબ, સેટેલાઈટ રોડ, લજામણી
+                            ચોક, મોટા વરાછા, સુરત.</a>
+                    </li>
+                    <li class="my-2">
+                        <a class="hover:text-gray-600" href="#">+91-92654 24423</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="flex py-5 m-auto text-gray-800 text-sm flex-col items-center border-t max-w-screen-xl">
-            <div class="w-full flex flex-col md:flex-row md:justify-between mt-2">
-                <div class="flex flex-row gap-8 mb-2 md:mb-0">
-                    <a class="text-2xl" href="https://www.facebook.com/share/VepQk5ajbDCDtjQy/?mibextid=LQQJ4d" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="text-2xl" href="https://youtube.com/@sahajanandallergyclinic?si=lUifzTGoqMmFKVBt" target="_blank"><i class="fab fa-youtube"></i></a>
-                    <a class="text-2xl" href="https://www.instagram.com/sahajanand_allergy_clinic?utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a class="text-2xl" href="https://wa.me/919265424423?text=Hello%20there!" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+        <!-- Footer Bottom Section -->
+        <div class="flex flex-col items-center py-5 mx-auto text-gray-800 text-sm border-t max-w-screen-lg">
+            <div class="flex flex-col md:flex-row justify-around items-center w-full gap-4">
+                <!-- Social Media Icons -->
+                <div class="flex flex-row gap-8">
+                    <a class="text-2xl" href="https://www.facebook.com/share/VepQk5ajbDCDtjQy/?mibextid=LQQJ4d"
+                        target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-2xl" href="https://youtube.com/@sahajanandallergyclinic?si=lUifzTGoqMmFKVBt"
+                        target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a class="text-2xl" href="https://www.instagram.com/sahajanand_allergy_clinic?utm_source=qr"
+                        target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-2xl" href="https://wa.me/919265424423?text=Hello%20there!" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
-                <div class="my-5">© Copyright 2024. All Rights Reserved.</div>
+
+                <!-- Copyright Section -->
+                <div class="my-2 md:my-0 text-center">© Copyright 2024. All Rights Reserved.</div>
             </div>
         </div>
     </div>
-    
+
 
 
 
@@ -520,6 +534,47 @@
                 window.open(whatsappUrl, '_blank');
             }, 100); // 100 milliseconds delay
         }
+    </script>
+
+    <script>
+        // Function to set active class on the clicked link and remove from others
+        function setActive(clickedId) {
+            // Get all links with the class 'rounded-md'
+            const links = document.querySelectorAll('.rounded-md');
+
+            // Loop through all links and remove the active class
+            links.forEach(link => {
+                link.classList.remove('bg-gray-900', 'text-white');
+                link.classList.add('text-black');
+            });
+
+            // Add active class to the clicked link
+            const activeLink = document.getElementById(clickedId);
+            activeLink.classList.add('bg-gray-900', 'text-white');
+            activeLink.classList.remove('text-black');
+        }
+
+        // Set "Home" as the default active link on page load
+        window.onload = function () {
+            setActive('homeBtn'); // For the main navigation
+            setActive('mobileHomeBtn'); // For the mobile menu
+        };
+
+        // Event delegation for main navigation
+        document.getElementById('nav-menu').addEventListener('click', function (event) {
+            if (event.target.tagName === 'A') {
+                const clickedId = event.target.id;
+                setActive(clickedId);
+            }
+        });
+
+        // Event delegation for mobile menu
+        document.getElementById('mobile-menu').addEventListener('click', function (event) {
+            if (event.target.tagName === 'A') {
+                const clickedId = event.target.id;
+                setActive(clickedId);
+            }
+        });
     </script>
 </body>
 
