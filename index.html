@@ -26,11 +26,11 @@
                         <a href="#Home" id="homeBtn"
                             class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
                             aria-current="page">Home</a>
-                        <a href="#" id="serviceBtn"
+                        <a href="#Service" id="serviceBtn"
                             class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black">Service</a>
-                        <a href="#" id="videosBtn"
+                        <a href="#video" id="videosBtn"
                             class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black">Videos</a>
-                        <a href="#" id="contactBtn"
+                        <a href="#Contact" id="contactBtn"
                             class="rounded-md px-3 py-2 text-sm font-medium text-black hover:bg-gray-200 hover:text-black">Contact</a>
                     </div>
 
@@ -60,11 +60,11 @@
             <div class="flex flex-col items-center space-y-1 px-2 pb-3 pt-2">
                 <a href="#" id="mobileHomeBtn" onclick="setActive('mobileHomeBtn')"
                     class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Home</a>
-                <a href="#" id="mobileServiceBtn" onclick="setActive('mobileServiceBtn')"
+                <a href="#Service" id="mobileServiceBtn" onclick="setActive('mobileServiceBtn')"
                     class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Service</a>
-                <a href="#" id="mobileVideosBtn" onclick="setActive('mobileVideosBtn')"
+                <a href="#video" id="mobileVideosBtn" onclick="setActive('mobileVideosBtn')"
                     class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Videos</a>
-                <a href="#" id="mobileContactBtn" onclick="setActive('mobileContactBtn')"
+                <a href="#Contact" id="mobileContactBtn" onclick="setActive('mobileContactBtn')"
                     class="block rounded-md px-3 py-2 text-base font-medium text-black hover:bg-gray-200 hover:text-black">Contact</a>
             </div>
         </div>
@@ -131,7 +131,7 @@
 
 
 
-    <section class="bg-gradient-to-r from-blue-50 to-teal-50 flex flex-col justify-items-center items-center">
+    <section class="bg-gradient-to-r from-blue-50 to-teal-50 flex flex-col justify-items-center items-center" id="video">
         <!-- Title Section -->
         <div class="text-center py-10">
             <h1 class="text-4xl font-bold text-black dark:text-white mb-4">
@@ -302,7 +302,7 @@
     <!-- profile end -->
 
 
-    <section class="px-3 py-5 bg-gradient-to-r from-blue-100 to-teal-100 lg:py-10">
+    <section class="px-3 py-5 bg-gradient-to-r from-blue-100 to-teal-100 lg:py-10" id="Service">
         <div class="grid lg:grid-cols-2 items-center justify-items-center gap-5">
             <!-- Text content -->
             <div class="order-2 lg:order-1 flex flex-col justify-center items-center text-center lg:text-left">
@@ -339,7 +339,7 @@
 
 
     <form onsubmit="sendMessage(); return false;">
-        <section class="text-gray-600 body-font relative bg-white">
+        <section class="text-gray-600 body-font relative bg-white" id="Contact">
             <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
                 <!-- Map Section -->
                 <div
@@ -532,7 +532,7 @@
             // Add a short delay before opening the link
             setTimeout(() => {
                 window.open(whatsappUrl, '_blank');
-            }, 100); // 100 milliseconds delay
+            }, 1000); // 100 milliseconds delay
         }
     </script>
 
