@@ -33,3 +33,45 @@
 // }    
 
 // even();
+
+
+
+
+
+// function small (a,b,c){
+
+
+//     if(a<b && a<c){
+//         console.log(a)
+//     }
+//     else if(b<c && b<a){
+//         console.log(b)
+//     }
+//     else if(c<a && c<b){
+//         console.log(c)
+//     }
+// }
+
+
+// small(10,5,1)
+
+
+
+// for(let i = 1; i <= 5; i++) {
+//     for(let j = 1; j <= i; j++) {
+//         if(i === 5) {
+//             document.write("#");  
+//         } else {
+//             document.write("*");    
+//         }
+//     }
+//     document.write("<br>");
+// }
+
+
+let string = prompt("")
+    
+// Reverse the string
+let newstring = string.split("").reverse().join("");
+
+console.log(newstring);
